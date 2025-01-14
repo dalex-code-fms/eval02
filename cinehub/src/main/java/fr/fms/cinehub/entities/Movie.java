@@ -12,26 +12,15 @@ import java.util.List;
 
 @Entity
 @Data @NoArgsConstructor @AllArgsConstructor @ToString
-public class Cinema {
+public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    @Size(min = 3, max = 20)
-    private String name;
+    @Size(min = 1, max = 50)
+    private String title;
 
-    @NotNull
-    @Size(min = 5, max = 30)
-    private String address;
-
-    @ManyToOne
-    private City city;
-
-    @ManyToMany
-    @JoinTable(
-            name = "cinema_movie",
-            joinColumns = @JoinColumn(name = "cinema_id"),
-            inverseJoinColumns = @JoinColumn(name = "movie_id"))
-    private List<Movie> movies;
+    @ManyToMany(mappedBy = "movies")
+    private List<Cinema> cinemas;
 }
