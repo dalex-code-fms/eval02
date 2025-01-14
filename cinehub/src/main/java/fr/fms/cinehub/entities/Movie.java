@@ -23,4 +23,8 @@ public class Movie {
 
     @ManyToMany(mappedBy = "movies")
     private List<Cinema> cinemas;
+
+    @OneToMany(mappedBy = "movie")
+    private List<Seance> seances;
+
 }
