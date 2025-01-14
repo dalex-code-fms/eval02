@@ -21,7 +21,7 @@ public class Seance {
 
     @ManyToOne
     private Movie movie;
-    
+
     @ManyToOne
     private Cinema cinema;
 }
