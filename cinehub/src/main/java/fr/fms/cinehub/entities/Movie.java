@@ -11,7 +11,10 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor @ToString
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

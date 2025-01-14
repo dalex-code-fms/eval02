@@ -10,7 +10,10 @@ import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
-@Data @NoArgsConstructor @AllArgsConstructor @ToString
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Seance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
