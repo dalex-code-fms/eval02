@@ -37,7 +37,7 @@ public class CinehubApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		generateData();
+		//generateData();
 	}
 
 	private void generateData(){
@@ -46,12 +46,12 @@ public class CinehubApplication implements CommandLineRunner {
 		City lyon = new City("Lyon", "Rhône", "France");
 		City marseille = new City("Marseille", "Bouches-du-Rhône", "France");
 
-		//cityRepository.saveAll(Arrays.asList(paris, lyon, marseille));
+		cityRepository.saveAll(Arrays.asList(paris, lyon, marseille));
 
 //		// Cinémas
-		Cinema cinepolisParis = new Cinema("Cinépolis Paris", "123 rue de Paris, Paris", paris);
-		Cinema ugcLyon = new Cinema("UGC Lyon", "456 avenue de Lyon, Lyon", lyon);
-		Cinema patheMarseille = new Cinema("Pathé Marseille", "789 boulevard de Marseille, Marseille", marseille);
+		Cinema cinepolisParis = new Cinema("Cinépolis", "123 rue de Paris, Paris", paris);
+		Cinema ugcLyon = new Cinema("UGC", "456 avenue de Lyon, Lyon", lyon);
+		Cinema patheMarseille = new Cinema("Pathé", "789 boulevard de Marseille, Marseille", marseille);
 
 		cinemaRepository.saveAll(Arrays.asList(cinepolisParis, ugcLyon, patheMarseille));
 //

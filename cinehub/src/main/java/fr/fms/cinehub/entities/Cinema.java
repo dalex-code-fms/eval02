@@ -25,10 +25,11 @@ public class Cinema {
     private String name;
 
     @NotNull
-    @Size(min = 5, max = 30)
+    @Size(min = 5, max = 100)
     private String address;
 
     @ManyToOne
+//    @JoinColumn(name = "city_id")
     private City city;
 
     @ManyToMany
@@ -79,11 +80,11 @@ public class Cinema {
         this.city = city;
     }
 
-    public @NotNull @Size(min = 5, max = 30) String getAddress() {
+    public @NotNull @Size(min = 5, max = 100) String getAddress() {
         return address;
     }
 
-    public void setAddress(@NotNull @Size(min = 5, max = 30) String address) {
+    public void setAddress(@NotNull @Size(min = 5, max = 100) String address) {
         this.address = address;
     }
 
