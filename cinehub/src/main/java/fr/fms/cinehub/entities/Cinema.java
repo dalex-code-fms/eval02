@@ -41,6 +41,12 @@ public class Cinema {
     public Cinema() {
     }
 
+    public Cinema(String name, String address, City city) {
+        this.name = name;
+        this.address = address;
+        this.city = city;
+    }
+
     public Cinema(String name, Long id, String address, City city, List<Movie> movies) {
         this.name = name;
         this.id = id;
