@@ -64,18 +64,18 @@ public class CinehubApplication implements CommandLineRunner {
 		movieRepository.saveAll(Arrays.asList(inception, theDarkKnight, interstellar, titanic));
 //
 //		// Liaisons Cinéma-Film
-//		cinepolisParis.setMovies(Arrays.asList(inception, theDarkKnight));
-//		ugcLyon.setMovies(Arrays.asList(theDarkKnight, interstellar));
-//		patheMarseille.setMovies(Arrays.asList(interstellar, titanic));
-//
-//		cinemaRepository.saveAll(Arrays.asList(cinepolisParis, ugcLyon, patheMarseille));
-//
-//		// Séances
-//		Seance seance1 = new Seance(LocalDateTime.of(2025, 1, 15, 14, 0), inception, cinepolisParis);
-//		Seance seance2 = new Seance(LocalDateTime.of(2025, 1, 15, 16, 30), theDarkKnight, cinepolisParis);
-//		Seance seance3 = new Seance(LocalDateTime.of(2025, 1, 16, 18, 0), interstellar, ugcLyon);
-//		Seance seance4 = new Seance(LocalDateTime.of(2025, 1, 17, 20, 0), titanic, patheMarseille);
-//
-//		seanceRepository.saveAll(Arrays.asList(seance1, seance2, seance3, seance4));
+		cinepolisParis.setMovies(Arrays.asList(inception, theDarkKnight));
+		ugcLyon.setMovies(Arrays.asList(theDarkKnight, interstellar));
+		patheMarseille.setMovies(Arrays.asList(interstellar, titanic));
+
+		cinemaRepository.saveAll(Arrays.asList(cinepolisParis, ugcLyon, patheMarseille));
+
+		// Séances
+		Seance seance1 = new Seance(LocalDateTime.of(2025, 1, 15, 14, 0), inception, cinepolisParis);
+		Seance seance2 = new Seance(LocalDateTime.of(2025, 1, 15, 16, 30), theDarkKnight, cinepolisParis);
+		Seance seance3 = new Seance(LocalDateTime.of(2025, 1, 16, 18, 0), interstellar, ugcLyon);
+		Seance seance4 = new Seance(LocalDateTime.of(2025, 1, 17, 20, 0), titanic, patheMarseille);
+
+		seanceRepository.saveAll(Arrays.asList(seance1, seance2, seance3, seance4));
 	}
 }
