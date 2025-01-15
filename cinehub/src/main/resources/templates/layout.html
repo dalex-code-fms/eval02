@@ -14,9 +14,11 @@
         <nav class="navbar">
                 <a class="logo" href="#">Cine<span>hub</span></a>
 
-                <form>
+                <form th:action="@{/}" method="get">
                     <input
-                        type="search"
+                        type="text"
+                        name="keyword"
+                        th:value="${keyword}"
                         placeholder="écrivez nom de ville ou cinema..."
                     >
                     <button type="submit">

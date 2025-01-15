@@ -97,6 +97,6 @@ public class Cinema {
 
     @Override
     public String toString() {
-        return "Cinema{" + "id=" + id + ", name='" + name + '\'' + ", address='" + address + '\'' + ", city=" + city + ", movies=" + movies + '}';
+        return "Cinema{" + "id=" + id + ", name='" + name + '\'' + ", address='" + address + '\'' + ", city=" + city != null ? city.getName() : "no city" + ", movies=" + movies + '}';
     }
 }

@@ -11,9 +11,40 @@
 <body>
 
 <main layout:fragment="content">
-  <section>
-    <h1>Home Page</h1>
+
+    <p th:if="${error}" th:text="${error}"></p>
+
+  <section th:if="${listOfCinemasByCountry} != null">
+      <h3 th:if="${#lists.isEmpty(listOfCinemasByCountry)}">Aucun cinéma n'a été trouvé pour la ville de " <span th:text="${keyword}"></span> "</h3>
+
+      <h3 th:if="${#lists.size(listOfCinemasByCountry)} > 1">On a trouvé <span th:text="${#lists.size(listOfCinemasByCountry)}"></span> cinémas dans la ville de " <span th:text="${keyword}"></span> ".</h3>
+
+      <h3 th:if="${#lists.size(listOfCinemasByCountry)} == 1">On a trouvé <span th:text="${#lists.size(listOfCinemasByCountry)}"></span> cinéma dans la ville de " <span th:text="${keyword}"></span> ".</h3>
+
+      <div th:if="${!#lists.isEmpty(listOfCinemasByCountry)}">
+          <ul th:each="cinema:${listOfCinemasByCountry}">
+              <li>
+                  <a href="#" th:text="${cinema.name}"></a>
+              </li>
+          </ul>
+      </div>
   </section>
+
+    <section th:if="${listOfCinemasByName} != null">
+        <h3 th:if="${#lists.isEmpty(listOfCinemasByName)}">Aucun cinéma n'a été trouvé avec le nom " <span th:text="${keyword}"></span> "</h3>
+
+        <h3 th:if="${#lists.size(listOfCinemasByName)} > 1">On a trouvé <span th:text="${#lists.size(listOfCinemasByName)}"></span> cinémas avec le nom " <span th:text="${keyword}"></span> ".</h3>
+
+        <h3 th:if="${#lists.size(listOfCinemasByName)} == 1">On a trouvé <span th:text="${#lists.size(listOfCinemasByName)}"></span> cinéma avec le nom " <span th:text="${keyword}"></span> ".</h3>
+
+        <div th:if="${!#lists.isEmpty(listOfCinemasByName)}">
+            <ul th:each="cinema:${listOfCinemasByName}">
+                <li>
+                    <a href="#" th:text="${cinema.name}"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </main>
 
 </body>
