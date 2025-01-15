@@ -29,7 +29,6 @@ public class Cinema {
     private String address;
 
     @ManyToOne
-//    @JoinColumn(name = "city_id")
     private City city;
 
     @ManyToMany
