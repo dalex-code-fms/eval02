@@ -70,3 +70,15 @@ form button {
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
 }
+
+footer {
+    background-color: #000000;
+    border-top: 2px solid #2E2A2A;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    padding: 0 3rem 0 3rem;
+    font-size: 1.6rem;
+}
