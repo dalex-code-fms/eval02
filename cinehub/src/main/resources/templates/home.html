@@ -24,7 +24,7 @@
       <div th:if="${!#lists.isEmpty(listOfCinemasByCountry)}">
           <ul th:each="cinema:${listOfCinemasByCountry}">
               <li>
-                  <a href="#" th:text="${cinema.name}"></a>
+                  <a th:href="@{/cinema (id=${cinema.id})}" th:text="${cinema.name}"></a>
               </li>
           </ul>
       </div>
@@ -40,7 +40,7 @@
         <div th:if="${!#lists.isEmpty(listOfCinemasByName)}">
             <ul th:each="cinema:${listOfCinemasByName}">
                 <li>
-                    <a href="#" th:text="${cinema.name}"></a>
+                    <a th:href="@{/cinema (id=${cinema.id})}" th:text="${cinema.name}"></a>
                 </li>
             </ul>
         </div>
